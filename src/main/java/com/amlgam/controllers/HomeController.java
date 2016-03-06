@@ -14,4 +14,10 @@ public class HomeController
     {
         return "index";
     }
+
+    @RequestMapping("/register")
+    public String register()
+    {
+        return null;
+    }
 }
