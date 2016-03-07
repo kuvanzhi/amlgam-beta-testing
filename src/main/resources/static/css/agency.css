@@ -51,7 +51,7 @@ h6 {
   margin: 0 auto;
 }
 .bg-light-gray {
-  background-color: #f7f7f7;
+  background-color: #fafafa;
 }
 .bg-orange {background-color: #fed136;}
 .bg-darkest-gray {
@@ -176,12 +176,23 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-toggle:focus {
   background-color: #fed136;
 }
+@media (min-width: 768px) {
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+}
 .navbar-default .nav li a {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
-  color: white;
+  color: black;
 }
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
@@ -217,7 +228,7 @@ fieldset[disabled] .btn-xl.active {
     border-radius: 3px;
   }
   .navbar-default.navbar-shrink {
-    background-color: #222222;
+    background-color: #fbfbfb;
     padding: 10px 0;
   }
   .navbar-default.navbar-shrink .navbar-brand {
@@ -225,7 +236,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/header-bg.jpg');
+  /*background-image: url('../img/header-bg.jpg');*/
   background-repeat: none;
   background-attachment: scroll;
   background-position: center center;
@@ -294,15 +305,21 @@ section h3.section-subheading {
 }
 @media (min-width: 768px) {
   section {
-    padding: 150px 0;
+    padding: 0 0;
+  }
+}
+@media (min-width: 768px) {
+  .bg-orange{
+    padding: 0 0 30px;
   }
 }
 .service-heading {
-  margin: 15px 0;
+  margin: 80px 0;
+  color: white;
   text-transform: none;
 }
 #portfolio .portfolio-item {
-  margin: 0 0 15px;
+  margin: 0 0 0;
   right: 0;
 }
 #portfolio .portfolio-item .portfolio-link {
@@ -359,11 +376,12 @@ section h3.section-subheading {
   margin: 0;
 }
 #portfolio * {
+  margin-top: 50px;
   z-index: 2;
 }
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
-    margin: 0 0 30px;
+    margin: 0 0 0;
   }
 }
 .timeline {
@@ -553,6 +571,7 @@ aside.clients img {
   margin: 50px auto;
 }
 section#contact {
+  padding: 50px 0;
   background-color: #222222;
   background-image: url('../img/map-image.png');
   background-position: center;
