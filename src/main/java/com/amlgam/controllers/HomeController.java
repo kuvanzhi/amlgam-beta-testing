@@ -16,7 +16,6 @@ import javax.validation.Valid;
  * Created by dima on 07.03.16.
  */
 @Controller
-@RequestMapping("/")
 public class HomeController
 {
     private SubscriberRepository repository;
@@ -26,14 +25,15 @@ public class HomeController
         this.repository = repository;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(ModelMap modelMap)
     {
+        System.out.println("GET ON /");
         modelMap.addAttribute("subscriber", new Subscriber());
         return "index";
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public String insertData(ModelMap model,
                              @ModelAttribute("subscriber") @Valid Subscriber subscriber,
                              BindingResult result) {
