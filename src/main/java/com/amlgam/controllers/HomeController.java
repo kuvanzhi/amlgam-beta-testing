@@ -37,6 +37,7 @@ public class HomeController
     public String insertData(ModelMap model,
                              @ModelAttribute("subscriber") @Valid Subscriber subscriber,
                              BindingResult result) {
+        System.out.println("Saving subscriber to db");
         if (!result.hasErrors()) {
             repository.save(subscriber);
         }
