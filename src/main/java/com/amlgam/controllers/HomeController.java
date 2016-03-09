@@ -38,10 +38,10 @@ public class HomeController
                              @ModelAttribute("subscriber") @Valid Subscriber subscriber,
                              BindingResult result) {
         System.out.println("Saving subscriber to db");
-        /*if (!result.hasErrors()) {
+        if (!result.hasErrors()) {
             repository.save(subscriber);
-        }*/
-        return "redirect:/";
+        }
+        return "popover";
     }
 
 }
