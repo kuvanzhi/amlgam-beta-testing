@@ -132,9 +132,14 @@
         <div class="clearfix colelem" id="u228-4"><!-- content -->
             <p>Subscribe for beta</p>
         </div>
-        <form class="form-grp clearfix colelem" id="widgetu397" method="post" enctype="multipart/form-data" action="scripts/form-u397.php"><!-- none box -->
+        <form th:object="${subscriber}" class="form-grp clearfix colelem" id="widgetu397" method="post" enctype="multipart/form-data"><!-- none box -->
             <div class="fld-grp clearfix grpelem" id="widgetu402" data-required="true" data-type="email"><!-- none box -->
-                <span class="fld-input NoWrap actAsDiv rounded-corners clearfix grpelem" id="u405-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu402_input" name="Email" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu402_prompt" for="widgetu402_input"><span class="actAsPara">Email</span></label></span>
+                <span class="fld-input NoWrap actAsDiv rounded-corners clearfix grpelem" id="u405-4"><!-- content -->
+                    <input th:field="*{email}" class="wrapped-input" type="text" spellcheck="false" id="widgetu402_input" name="Email" tabindex="1"/>
+                    <label class="wrapped-input fld-prompt" id="widgetu402_prompt" for="widgetu402_input">
+                        <span class="actAsPara">Email</span>
+                    </label>
+                </span>
             </div>
             <div class="clearfix grpelem" id="u406-4"><!-- content -->
                 <p>Отправка формы…</p>
